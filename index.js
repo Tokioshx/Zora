@@ -13,5 +13,6 @@ client.commands = new Collection();
 client.config = require('./handler/config.js');
 
 require('./handler')(client);
+require('dotenv').config();
 
-client.login(client.config.token);
+client.login(process.env.token);
