@@ -153,6 +153,8 @@ client.on(Events.InteractionCreate, async (interaction) => {
             )
             .setTimestamp()
           ]
+        }).catch(() => {
+          return;
         });
       });
     };
@@ -205,7 +207,10 @@ client.on(Events.InteractionCreate, async (interaction) => {
             )
             .setTimestamp()
           ]
+        }).catch(() => {
+          return;
         });
+
         await db.delete(`tiketChannel_${channel.id}`);
         await db.delete(`tiketOrder_${user}`);
       });
@@ -359,6 +364,8 @@ client.on(Events.InteractionCreate, async (interaction) => {
             )
             .setTimestamp()
           ]
+        }).catch(() => {
+          return;
         });
       });
     };
@@ -411,7 +418,10 @@ client.on(Events.InteractionCreate, async (interaction) => {
             )
             .setTimestamp()
           ]
+        }).catch(() => {
+          return;
         });
+
         await db.delete(`tiketChannel_${channel.id}`);
         await db.delete(`tiketKomplen_${user}`);
       });
@@ -493,7 +503,10 @@ client.on(Events.InteractionCreate, async (interaction) => {
             )
             .setTimestamp()
           ]
+        }).catch(() => {
+          return;
         });
+
         await db.delete(`tiketChannel_${channel.id}`);
         await db.delete(`tiketOrder_${user}`);
       });
@@ -520,6 +533,8 @@ client.on(Events.InteractionCreate, async (interaction) => {
             )
             .setTimestamp()
           ]
+        }).catch(() => {
+          return;
         });
         await db.delete(`tiketChannel_${channel.id}`);
         await db.delete(`tiketKomplen_${user}`);
